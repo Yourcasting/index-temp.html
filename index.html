@@ -75,11 +75,15 @@ footer {background:#222; color:white; text-align:center; padding:20px; margin-to
 </select>
 
 <h3>Augšupielādē savus attēlus</h3>
-<div class="images">
-<img src="https://via.placeholder.com/300x500.png?text=Pilna+auguma" alt="Pilna auguma bilde">
-<img src="https://via.placeholder.com/300x400.png?text=Portrets" alt="Portrets">
-<img src="https://via.placeholder.com/300x400.png?text=Sānskats" alt="Sānskats">
-</div>
+
+<label>Pilna auguma bilde:</label>
+<input type="file" name="pilna_auguma" accept="image/*" required>
+
+<label>Portreta bilde:</label>
+<input type="file" name="portrets" accept="image/*" required>
+
+<label>Sānskata bilde:</label>
+<input type="file" name="sanskats" accept="image/*" required>
 
 <button type="submit">Sūtīt pieteikumu</button>
 </form>
