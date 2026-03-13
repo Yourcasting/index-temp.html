@@ -13,7 +13,7 @@ body{
   color:#333;
 }
 
-/* HEADER */
+/* HEADER / HERO */
 header{
   background:#111;
   color:white;
@@ -26,6 +26,12 @@ header h1{
 }
 header p{
   font-size:20px;
+}
+.header-image{
+  width:300px;
+  max-width:90%;
+  border-radius:10px;
+  margin-top:20px;
 }
 .button{
   display:inline-block;
@@ -127,56 +133,15 @@ footer{
   padding:30px;
   margin-top:60px;
 }
-
-/* PORTFOLIO */
-.portfolio-tabs{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  margin-bottom:40px;
-  flex-wrap:wrap;
-}
-.tab-button{
-  padding:10px 20px;
-  background:#222;
-  border:none;
-  color:white;
-  cursor:pointer;
-  border-radius:6px;
-  font-size:16px;
-  transition:0.3s;
-}
-.tab-button:hover{
-  background:#555;
-}
-.tab-button.active{
-  background:#0077ff;
-}
-.tab-content{
-  display:none;
-}
-.tab-content.active{
-  display:block;
-}
-.gallery{
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-  justify-content:center;
-}
-.gallery img{
-  width:300px;
-  height:200px;
-  object-fit:cover;
-  border-radius:10px;
-}
 </style>
 </head>
+
 <body>
 
 <header>
 <h1>Casting Aģentūra</h1>
 <p>Profesionāls ceļš uz modelēšanu un aktiermākslu</p>
+<img src="model.jpg" alt="Hero modelis" class="header-image">
 <a class="button" href="#pieteikums">Pieteikties</a>
 </header>
 
@@ -208,12 +173,12 @@ footer{
 <h2>Mūsu komanda</h2>
 <div class="team">
   <div class="member">
-    <img src="vaditajs1.jpeg.jpeg" alt="Rēzija Ziediņa">
+    <img src="vaditajs1.jpeg" alt="Rēzija Ziediņa">
     <h3>Rēzija Ziediņa</h3>
     <p>Sporta Akadēmijas studente, kas zina, ka disciplīna pārspēj talantu.</p>
   </div>
   <div class="member">
-    <img src="vaditajs2.jpeg.jpeg" alt="Oskars Toms">
+    <img src="vaditajs2.jpeg" alt="Oskars Toms">
     <h3>Oskars Toms</h3>
     <p>Video operators un Casting aģentūras dibinātājs.</p>
   </div>
@@ -221,37 +186,6 @@ footer{
     <img src="vaditajs3.jpeg" alt="Sonora Ziediņa">
     <h3>Sonora Ziediņa</h3>
     <p>Karjeras konsultants un mentors.</p>
-  </div>
-</div>
-</section>
-
-<section id="portfolio">
-<h2>Portfolio</h2>
-<div class="portfolio-tabs">
-  <button class="tab-button active" data-tab="visi">Visi darbi</button>
-  <button class="tab-button" data-tab="filmas">Filmas</button>
-  <button class="tab-button" data-tab="fotosesijas">Fotosesijas / Mūzikas videoklipi</button>
-</div>
-<div class="portfolio-content">
-  <div class="tab-content active" id="visi">
-    <div class="gallery">
-      <img src="darbs1.jpg" alt="Darbs 1">
-      <img src="darbs2.jpg" alt="Darbs 2">
-      <img src="darbs3.jpg" alt="Darbs 3">
-    </div>
-  </div>
-  <div class="tab-content" id="filmas">
-    <div class="gallery">
-      <img src="filma1.jpg" alt="Filma 1">
-      <img src="filma2.jpg" alt="Filma 2">
-    </div>
-  </div>
-  <div class="tab-content" id="fotosesijas">
-    <div class="gallery">
-      <img src="foto1.jpg" alt="Fotosesija 1">
-      <img src="foto2.jpg" alt="Fotosesija 2">
-      <img src="video1.jpg" alt="Videoklips 1">
-    </div>
   </div>
 </div>
 </section>
@@ -287,19 +221,6 @@ footer{
 <footer>
 © 2026 Casting Aģentūra Your Casting
 </footer>
-
-<script>
-const tabs = document.querySelectorAll('.tab-button');
-const contents = document.querySelectorAll('.tab-content');
-tabs.forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    tabs.forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    contents.forEach(c=>c.classList.remove('active'));
-    document.getElementById(tab.dataset.tab).classList.add('active');
-  });
-});
-</script>
 
 </body>
 </html>
