@@ -6,147 +6,129 @@
 <title>Your Casting</title>
 
 <style>
-
 body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f4f4f4;
-color:#333;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f4f4f4;
+  color:#333;
 }
 
 /* HEADER */
-
 header{
-background:#111;
-color:white;
-text-align:center;
-padding:80px 20px;
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:80px 20px;
 }
-
 header h1{
-font-size:50px;
-margin-bottom:10px;
+  font-size:50px;
+  margin-bottom:10px;
 }
-
 header p{
-font-size:20px;
+  font-size:20px;
 }
-
 .button{
-display:inline-block;
-margin-top:20px;
-padding:14px 26px;
-background:#0077ff;
-color:white;
-text-decoration:none;
-border-radius:6px;
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 26px;
+  background:#0077ff;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
 }
 
 /* SECTIONS */
-
 section{
-padding:60px 20px;
-max-width:1100px;
-margin:auto;
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
 }
-
 h2{
-text-align:center;
-margin-bottom:40px;
+  text-align:center;
+  margin-bottom:40px;
 }
 
 /* SERVICES */
-
 .services{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
 }
-
 .card{
-background:white;
-padding:25px;
-border-radius:10px;
-flex:1;
-min-width:250px;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-text-align:center;
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  flex:1;
+  min-width:250px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  text-align:center;
 }
 
 /* TEAM */
-
 .team{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
 }
-
 .member{
-background:white;
-border-radius:10px;
-padding:20px;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-min-width:250px;
-flex:1;
-text-align:center;
+  background:white;
+  border-radius:10px;
+  padding:20px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  min-width:250px;
+  flex:1;
+  text-align:center;
 }
-
-.member img{src="model.jpg">
-width:100%;
-max-height:300px;
-object-fit:cover;
-border-radius:10px;
-margin-bottom:15px;
+.member img{
+  width:100%;
+  max-height:300px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:15px;
 }
 
 /* FORM */
-
 form{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-max-width:600px;
-margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  max-width:600px;
+  margin:auto;
 }
-
 form input,
 form select,
 form textarea{
-width:100%;
-padding:10px;
-margin-bottom:15px;
-border-radius:6px;
-border:1px solid #ccc;
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  border-radius:6px;
+  border:1px solid #ccc;
 }
-
 form button{
-background:#0077ff;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:6px;
-cursor:pointer;
+  background:#0077ff;
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:6px;
+  cursor:pointer;
 }
-
 form button:hover{
-background:#005bb5;
+  background:#005bb5;
 }
 
 /* FOOTER */
-
 footer{
-background:#222;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:60px;
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-top:60px;
 }
 
-</style>
-  /* Portfolio */
+/* PORTFOLIO */
 .portfolio-tabs{
   display:flex;
   justify-content:center;
@@ -154,7 +136,6 @@ margin-top:60px;
   margin-bottom:40px;
   flex-wrap:wrap;
 }
-
 .tab-button{
   padding:10px 20px;
   background:#222;
@@ -165,52 +146,33 @@ margin-top:60px;
   font-size:16px;
   transition:0.3s;
 }
-
 .tab-button:hover{
   background:#555;
 }
-
 .tab-button.active{
   background:#0077ff;
 }
-
 .tab-content{
   display:none;
 }
-
 .tab-content.active{
   display:block;
 }
-
 .gallery{
   display:flex;
   flex-wrap:wrap;
   gap:20px;
   justify-content:center;
 }
-
 .gallery img{
   width:300px;
   height:200px;
   object-fit:cover;
   border-radius:10px;
 }
+</style>
 </head>
-
-<body<script>
-const tabs = document.querySelectorAll('.tab-button');
-const contents = document.querySelectorAll('.tab-content');
-
-tabs.forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    tabs.forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-
-    contents.forEach(c=>c.classList.remove('active'));
-    document.getElementById(tab.dataset.tab).classList.add('active');
-  });
-});
-</script> >
+<body>
 
 <header>
 <h1>Casting Aģentūra</h1>
@@ -220,19 +182,15 @@ tabs.forEach(tab=>{
 
 <section>
 <h2>Mūsu pakalpojumi</h2>
-
 <div class="services">
-
-<div class="card">
-<h3>Modeļu atlase</h3>
-<p>Palīdzam atrast ideālus modeļus projektam.</p>
-</div>
-
-<div class="card">
-<h3>Aktieru atlase</h3>
-<p>Testējam aktieru prasmes un piemērotību lomu izpildei.</p>
-</div>
-
+  <div class="card">
+    <h3>Modeļu atlase</h3>
+    <p>Palīdzam atrast ideālus modeļus projektam.</p>
+  </div>
+  <div class="card">
+    <h3>Aktieru atlase</h3>
+    <p>Testējam aktieru prasmes un piemērotību lomu izpildei.</p>
+  </div>
 </div>
 </section>
 
@@ -242,101 +200,73 @@ tabs.forEach(tab=>{
 
 <section>
 <h2>Par mums</h2>
-
-<p>
-Mēs esam kastinga aģentūra, kas palīdz talantiem satikt īstās iespējas.
-Strādājam ar reklāmām, filmām, fotosesijām un dažādiem mediju projektiem.
-</p>
-
-<p>
-Mēs ticam, ka katrs cilvēks var būt pamanīts. Mūsu mērķis ir radīt
-iespējas jaunajiem talantiem attīstīties un parādīt savu potenciālu.
-</p>
-
+<p>Mēs esam kastinga aģentūra, kas palīdz talantiem satikt īstās iespējas. Strādājam ar reklāmām, filmām, fotosesijām un dažādiem mediju projektiem.</p>
+<p>Mēs ticam, ka katrs cilvēks var būt pamanīts. Mūsu mērķis ir radīt iespējas jaunajiem talantiem attīstīties un parādīt savu potenciālu.</p>
 </section>
 
 <section>
-
 <h2>Mūsu komanda</h2>
-
 <div class="team">
-
-<div class="member">
-<img src="vaditajs1.jpeg.jpeg" alt="Rēzijas Ziediņa">
-<h3>Rēzija Ziediņa</h3>
-<p>Sporta Akadēmijas studente, kas zin, ka disciplīna pārspēj talanu.</p>
+  <div class="member">
+    <img src="vaditajs1.jpeg.jpeg" alt="Rēzija Ziediņa">
+    <h3>Rēzija Ziediņa</h3>
+    <p>Sporta Akadēmijas studente, kas zina, ka disciplīna pārspēj talantu.</p>
+  </div>
+  <div class="member">
+    <img src="vaditajs2.jpeg.jpeg" alt="Oskars Toms">
+    <h3>Oskars Toms</h3>
+    <p>Video operators un Casting aģentūras dibinātājs.</p>
+  </div>
+  <div class="member">
+    <img src="vaditajs3.jpeg" alt="Sonora Ziediņa">
+    <h3>Sonora Ziediņa</h3>
+    <p>Karjeras konsultants un mentors.</p>
+  </div>
 </div>
-
-<div class="member">
-<img src="vaditajs2.jpeg.jpeg" alt="Oskars Toms">
-<h3>Oskars Toms</h3>
-<p>Video operators un Casting aģentūras dibinātājs.</p>
-</div>
-
-<div class="member">
-<img src="https://via.placeholder.com/300x300" alt="">
-<h3>Sonora Ziediņa</h3>
-<p>Karjeras konsultants un mentors.</p>
-</div>
-
-</div>
-
 </section>
-  <section id="portfolio">
-  <h2>Portfolio</h2>
 
-  <div class="portfolio-tabs">
-    <button class="tab-button active" data-tab="visi">Visi darbi</button>
-    <button class="tab-button" data-tab="filmas">Filmas</button>
-    <button class="tab-button" data-tab="fotosesijas">Fotosesijas / Mūzikas videoklipi</button>
+<section id="portfolio">
+<h2>Portfolio</h2>
+<div class="portfolio-tabs">
+  <button class="tab-button active" data-tab="visi">Visi darbi</button>
+  <button class="tab-button" data-tab="filmas">Filmas</button>
+  <button class="tab-button" data-tab="fotosesijas">Fotosesijas / Mūzikas videoklipi</button>
+</div>
+<div class="portfolio-content">
+  <div class="tab-content active" id="visi">
+    <div class="gallery">
+      <img src="darbs1.jpg" alt="Darbs 1">
+      <img src="darbs2.jpg" alt="Darbs 2">
+      <img src="darbs3.jpg" alt="Darbs 3">
+    </div>
   </div>
-
-  <div class="portfolio-content">
-
-    <div class="tab-content active" id="visi">
-      <div class="gallery">
-        <img src="darbs1.jpg" alt="Darbs 1">
-        <img src="darbs2.jpg" alt="Darbs 2">
-        <img src="darbs3.jpg" alt="Darbs 3">
-      </div>
+  <div class="tab-content" id="filmas">
+    <div class="gallery">
+      <img src="filma1.jpg" alt="Filma 1">
+      <img src="filma2.jpg" alt="Filma 2">
     </div>
-
-    <div class="tab-content" id="filmas">
-      <div class="gallery">
-        <img src="filma1.jpg" alt="Filma 1">
-        <img src="filma2.jpg" alt="Filma 2">
-      </div>
-    </div>
-
-    <div class="tab-content" id="fotosesijas">
-      <div class="gallery">
-        <img src="foto1.jpg" alt="Fotosesija 1">
-        <img src="foto2.jpg" alt="Fotosesija 2">
-        <img src="video1.jpg" alt="Videoklips 1">
-      </div>
-    </div>
-
   </div>
+  <div class="tab-content" id="fotosesijas">
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Fotosesija 1">
+      <img src="foto2.jpg" alt="Fotosesija 2">
+      <img src="video1.jpg" alt="Videoklips 1">
+    </div>
+  </div>
+</div>
 </section>
 
 <section id="pieteikums">
-
 <h2>Pieteikuma anketa</h2>
-
-<form>
-
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 <label>Vārds</label>
-<input type="text" required>
-
+<input type="text" name="vards" required>
 <label>Uzvārds</label>
-<input type="text" required>
-
+<input type="text" name="uzvards" required>
 <label>E-pasts</label>
-<input type="email" required>
-
+<input type="email" name="epasts" required>
 <label>Kā jūs uzzinājāt par mūsu mājaslapu?</label>
-
-<select required>
+<select name="info" required>
 <option value="">Izvēlies</option>
 <option>Facebook</option>
 <option>Instagram</option>
@@ -344,25 +274,32 @@ iespējas jaunajiem talantiem attīstīties un parādīt savu potenciālu.
 <option>Draugi</option>
 <option>Cits</option>
 </select>
-
 <label>Pilna auguma bilde</label>
-<input type="file">
-
+<input type="file" name="pilna_auguma">
 <label>Portreta bilde</label>
-<input type="file">
-
+<input type="file" name="portrets">
 <label>Sānskata bilde</label>
-<input type="file">
-
-<button>Sūtīt pieteikumu</button>
-
+<input type="file" name="sanskats">
+<button type="submit">Sūtīt pieteikumu</button>
 </form>
-
 </section>
 
 <footer>
 © 2026 Casting Aģentūra Your Casting
 </footer>
+
+<script>
+const tabs = document.querySelectorAll('.tab-button');
+const contents = document.querySelectorAll('.tab-content');
+tabs.forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    tabs.forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    contents.forEach(c=>c.classList.remove('active'));
+    document.getElementById(tab.dataset.tab).classList.add('active');
+  });
+});
+</script>
 
 </body>
 </html>
