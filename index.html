@@ -6,7 +6,7 @@
 <title>Your Casting</title>
 
 <style>
-body{<img src="model.jpg" alt="Hero modelis" class="header-image">
+body{
   margin:0;
   font-family:Arial, sans-serif;
   background:#f4f4f4;
@@ -71,7 +71,20 @@ h2{
   text-align:center;
 }
 
-/* TEAM */
+/* TEAM ar fona bildi */
+.team-section {
+  background-image: url(model.jpg'); /* Tavs fona attēls */
+  background-size: cover;
+  background-position: center;
+  padding:80px 20px;
+  color:white;
+  text-align:center;
+}
+.team-section h2 {
+  font-size:50px;
+  margin-bottom:50px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
 .team{
   display:flex;
   flex-wrap:wrap;
@@ -79,10 +92,9 @@ h2{
   justify-content:center;
 }
 .member{
-  background:white;
-  border-radius:10px;
+  background: rgba(0,0,0,0.5);
   padding:20px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  border-radius:10px;
   min-width:250px;
   flex:1;
   text-align:center;
@@ -141,6 +153,7 @@ footer{
 <header>
 <h1>Your Casting</h1>
 <p>Profesionāls ceļš uz modelēšanu un aktiermākslu</p>
+<img src="model.jpg" alt="Hero modelis" class="header-image">
 <a class="button" href="#pieteikums">Pieteikties</a>
 </header>
 
@@ -168,16 +181,16 @@ footer{
 <p>Mēs ticam, ka katrs cilvēks var būt pamanīts. Mūsu mērķis ir radīt iespējas jaunajiem talantiem attīstīties un parādīt savu potenciālu.</p>
 </section>
 
-<section>
+<section class="team-section">
 <h2>Mūsu komanda</h2>
 <div class="team">
   <div class="member">
-    <img src="vaditajs1.jpeg.jpeg" alt="Rēzija Ziediņa">
+    <img src="vaditajs1.jpeg" alt="Rēzija Ziediņa">
     <h3>Rēzija Ziediņa</h3>
     <p>Sporta Akadēmijas studente, kas zina, ka disciplīna pārspēj talantu.</p>
   </div>
   <div class="member">
-    <img src="vaditajs2.jpeg.jpeg" alt="Oskars Toms">
+    <img src="vaditajs2.jpeg" alt="Oskars Toms">
     <h3>Oskars Toms</h3>
     <p>Video operators un Casting aģentūras dibinātājs.</p>
   </div>
